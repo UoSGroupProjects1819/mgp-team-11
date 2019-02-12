@@ -2,35 +2,70 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patrol : MonoBehaviour {
-
+public class Movement : MonoBehaviour
+{
     public float speed;
     private float waitTime;
     public float startWaitTime;
-
     public Transform[] moveSpots;
-    private int randomSpot;
+
+    //Needs to be facing the next target
+    public bool isRotating = false;
+    private int nextIndex;
 
     private void Start()
     {
         waitTime = startWaitTime;
-        randomSpot = Random.Range(0, moveSpots.Length);
+        nextIndex = 1;
+        //randomSpot = Random.Range(0, moveSpots.Length);
     }
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-
-        if(Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
+        if (!isRotating)
         {
-            if(waitTime <= 0)
+            transform.position = Vector2.MoveTowards(transform.position, moveSpots[nextIndex].position, speed * Time.deltaTime);
+        }
+
+
+        if (Vector2.Distance(transform.position, moveSpots[nextIndex].position) < 0.2f)
+        {
+            if (waitTime <= 0)
             {
-                randomSpot = Random.Range(0, moveSpots.Length);
+                if (nextIndex == 1)
+                {
+                    nextIndex = 0;
+                }
+                else
+                {
+                    nextIndex = 1;
+                }
                 waitTime = startWaitTime;
+                StartCoroutine(Rotate());
+                isRotating = true;
+                //transform.Rotate(new Vector3(0, 0, 180));
+                //isRotating = true;
             }
             else
             {
                 waitTime -= Time.deltaTime;
+            }
+        }
+
+    }
+
+    private IEnumerator Rotate()
+    {
+        int count = 0;
+        while (true)
+        {
+            transform.Rotate(new Vector3(0f, 0f, count));
+            count++;
+            yield return new WaitForSeconds(0.01f);
+            if (count == 180)
+            {
+                isRotating = false;
+                break;
             }
         }
     }
