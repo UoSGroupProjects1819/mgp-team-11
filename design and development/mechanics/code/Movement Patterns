@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
-{
+public class movement : MonoBehaviour {
+
     public float speed;
     private float waitTime;
     public float startWaitTime;
     public Transform[] moveSpots;
 
-    //Needs to be facing the next target
     public bool isRotating = false;
     private int nextIndex;
 
@@ -17,7 +16,6 @@ public class Movement : MonoBehaviour
     {
         waitTime = startWaitTime;
         nextIndex = 1;
-        //randomSpot = Random.Range(0, moveSpots.Length);
     }
 
     private void Update()
@@ -41,10 +39,8 @@ public class Movement : MonoBehaviour
                     nextIndex = 1;
                 }
                 waitTime = startWaitTime;
-                StartCoroutine(Rotate());
+                StartCoroutine(Rotate(Vector3.forward, 180, 1.0f));
                 isRotating = true;
-                //transform.Rotate(new Vector3(0, 0, 180));
-                //isRotating = true;
             }
             else
             {
@@ -54,19 +50,20 @@ public class Movement : MonoBehaviour
 
     }
 
-    private IEnumerator Rotate()
+    IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
-        int count = 0;
-        while (true)
+        Quaternion from = transform.rotation;
+        Quaternion to = transform.rotation;
+        to *= Quaternion.Euler(axis * angle);
+
+        float elapsed = 0.0f;
+        while (elapsed < duration)
         {
-            transform.Rotate(new Vector3(0f, 0f, count));
-            count++;
+            transform.rotation = Quaternion.Slerp(from, to, elapsed / duration);
+            elapsed += Time.deltaTime;
             yield return new WaitForSeconds(0.01f);
-            if (count == 180)
-            {
-                isRotating = false;
-                break;
-            }
         }
+        transform.rotation = to;
+        isRotating = false;
     }
 }
