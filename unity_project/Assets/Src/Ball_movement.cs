@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Ball_movement : MonoBehaviour
 {
+    public bool sleeping;
     public bool aiming;
     public float speed; 
     public bool ready;
     public LineRenderer line;
     public Vector3 startPos;
     public Vector3 endPos;
-    public float maxDist; 
+    public float maxDist;
+    public Vector3 maxForce;
+    private float sleepTime;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +22,18 @@ public class Ball_movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (this.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f)
         {
             ready = true;
         } else {
-            ready = false;    
+            ready = false;
+            sleepTime = Time.time + 2f;
+            sleeping = true;
         }
 
-        if (Input.GetMouseButton(0) && ready && !aiming)
+        if (Input.GetMouseButton(0) && ready && !aiming && !sleeping)
         {
             aiming = true;
         }
@@ -37,6 +42,14 @@ public class Ball_movement : MonoBehaviour
         {
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Shoot();
+        }
+
+        if (sleeping)
+        {
+            if (Time.time > sleepTime)
+            {
+                sleeping = false;
+            }
         }
 
         if (aiming)
