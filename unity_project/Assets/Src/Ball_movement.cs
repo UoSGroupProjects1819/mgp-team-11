@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball_movement : MonoBehaviour
 {
     public bool sleeping;
+    public float maxSpeed;
     public bool aiming;
     public float speed; 
     public bool ready;
@@ -84,5 +85,6 @@ public class Ball_movement : MonoBehaviour
 
         Vector3 direction = startPos - endPos;
         this.GetComponent<Rigidbody2D>().AddForce(direction * speed);
+        this.GetComponent<Rigidbody2D>().AddForce(direction * speed * -0.5f);
     }
 }

@@ -483,6 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7829d935573ed14f871bf44a1ea87f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sleeping: 0
+  maxSpeed: 50
   aiming: 0
   speed: 25
   ready: 0
@@ -490,3 +492,4 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   maxDist: 3
+  maxForce: {x: 0, y: 0, z: 0}
