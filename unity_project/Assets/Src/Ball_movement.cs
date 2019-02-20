@@ -12,6 +12,7 @@ public class Ball_movement : MonoBehaviour
     public Vector3 endPos;
     public float maxDist;
     public Rigidbody2D RigidBody2D;
+    public int moves;
 
     // Start is called before the first frame update
     void Start()
