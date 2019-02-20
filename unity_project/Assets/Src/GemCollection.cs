@@ -5,6 +5,7 @@ using UnityEngine;
 public class GemCollection : MonoBehaviour
 {
     public Rigidbody2D RigidBody2D;
+    public GameObject score;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class GemCollection : MonoBehaviour
         if (collision.gameObject.tag == "Gem")
         {
             collision.gameObject.SetActive(false);
+            score.GetComponent<scoring>().score += 1;
         }
     }
 }

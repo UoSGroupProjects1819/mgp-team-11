@@ -4,37 +4,35 @@ using UnityEngine;
 
 public class Ball_movement : MonoBehaviour
 {
-    public bool sleeping;
-    public float maxSpeed;
     public bool aiming;
-    public float speed; 
+    public float speed;
     public bool ready;
     public LineRenderer line;
     public Vector3 startPos;
     public Vector3 endPos;
     public float maxDist;
-    public Vector3 maxForce;
-    private float sleepTime;
+    public Rigidbody2D RigidBody2D;
 
     // Start is called before the first frame update
     void Start()
     {
         line.GetComponent<LineRenderer>().enabled = true;
+        RigidBody2D = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (this.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f)
         {
             ready = true;
-        } else {
+        }
+        else
+        {
             ready = false;
-            sleepTime = Time.time + 2f;
-            sleeping = true;
         }
 
-        if (Input.GetMouseButton(0) && ready && !aiming && !sleeping)
+        if (Input.GetMouseButton(0) && ready && !aiming)
         {
             aiming = true;
         }
@@ -43,14 +41,6 @@ public class Ball_movement : MonoBehaviour
         {
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Shoot();
-        }
-
-        if (sleeping)
-        {
-            if (Time.time > sleepTime)
-            {
-                sleeping = false;
-            }
         }
 
         if (aiming)
@@ -69,7 +59,9 @@ public class Ball_movement : MonoBehaviour
                 endPos = this.transform.position + (dir.normalized * maxDist);
             }
             line.GetComponent<LineRenderer>().SetPosition(1, endPos);
-        } else {
+        }
+        else
+        {
             line.GetComponent<LineRenderer>().enabled = false;
         }
     }
@@ -85,6 +77,6 @@ public class Ball_movement : MonoBehaviour
 
         Vector3 direction = startPos - endPos;
         this.GetComponent<Rigidbody2D>().AddForce(direction * speed);
-        this.GetComponent<Rigidbody2D>().AddForce(direction * speed * -0.5f);
     }
+
 }
