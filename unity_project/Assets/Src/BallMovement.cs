@@ -2,29 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball_movement : MonoBehaviour
+public class BallMovement : MonoBehaviour
 {
     public bool aiming;
     public float speed;
     public bool ready;
     public LineRenderer line;
-    public Vector3 startPos;
-    public Vector3 endPos;
+    public Vector2 startPos;
+    public Vector2 endPos;
     public float maxDist;
-    public Rigidbody2D rigid;
+    public Rigidbody2D RigidBody2D;
     public int moves;
+    public float sleepTime;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        line.GetComponent<LineRenderer>().enabled = true;
-        rigid = this.GetComponent<Rigidbody2D>();
+        RigidBody2D = this.GetComponent<Rigidbody2D>();
+        line.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (this.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f)
+        if (this.GetComponent<Rigidbody2D>().velocity.magnitude < 0.01f)
         {
             ready = true;
         }
@@ -33,12 +35,12 @@ public class Ball_movement : MonoBehaviour
             ready = false;
         }
 
-        if (Input.GetMouseButton(0) && ready && !aiming)
+        if (Input.GetMouseButtonUp(0) && ready && !aiming)
         {
             aiming = true;
         }
 
-        if (Input.GetMouseButtonUp(0) == true && aiming && ready)
+        if (Input.GetMouseButtonUp(0) && ready && aiming)
         {
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Shoot();
@@ -48,7 +50,6 @@ public class Ball_movement : MonoBehaviour
         {
             line.GetComponent<LineRenderer>().enabled = true;
             startPos = this.transform.position;
-            line.GetComponent<LineRenderer>().SetPosition(0, startPos);
             Vector3 shootPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             shootPos.z = 0;
             shootPos = this.transform.position + (this.transform.position - shootPos);
@@ -66,7 +67,6 @@ public class Ball_movement : MonoBehaviour
             line.GetComponent<LineRenderer>().enabled = false;
         }
     }
-
     void Shoot()
     {
         aiming = false;
@@ -77,7 +77,6 @@ public class Ball_movement : MonoBehaviour
         }*/
 
         Vector3 direction = startPos - endPos;
-        rigid.AddForce(direction * speed);
+        this.GetComponent<Rigidbody2D>().AddForce(direction * speed);
     }
-
 }

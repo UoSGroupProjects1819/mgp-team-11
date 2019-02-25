@@ -30,17 +30,20 @@ public class VentsMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SleepTime = Time.time + 2;
-            if (SleepTime > Time.time)
-            {
-                collision.gameObject.SetActive(false);
-            }
-            else
-            {
-                collision.transform.position = VentPos;
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
-                collision.gameObject.SetActive(true);
-            }  
+            StartCoroutine(PerformTransportation(collision.gameObject, 2.0f));
         }
+    }
+
+    // Googled IEnumerator as suggested by friend
+    IEnumerator PerformTransportation(GameObject ball, float time)
+    {
+        ball.SetActive(false);
+
+        yield return new WaitForSeconds(time);
+
+        ball.SetActive(true);
+
+        ball.transform.position = VentPos;
+        ball.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
     }
 }
