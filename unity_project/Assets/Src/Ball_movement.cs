@@ -13,12 +13,20 @@ public class Ball_movement : MonoBehaviour
     public float maxDist;
     public Rigidbody2D rigid;
     public int moves;
+    public GameObject Spawn;
+    private float SpawnX;
+    private float SpawnY;
+    private Vector2 SpawnArea;
 
     // Start is called before the first frame update
     void Start()
     {
+        SpawnX = Spawn.transform.position.x;
+        SpawnY = Spawn.transform.position.y;
+        SpawnArea = new Vector2(SpawnX, SpawnY);
         line.GetComponent<LineRenderer>().enabled = true;
         rigid = this.GetComponent<Rigidbody2D>();
+        transform.position = SpawnArea;
     }
 
     // Update is called once per frame
