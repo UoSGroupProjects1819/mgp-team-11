@@ -77,6 +77,7 @@ public class Ball_movement : MonoBehaviour
 
     void Shoot()
     {
+        moves++;
         aiming = false;
         Debug.Log("Shooting @ " + endPos.ToString());
         /*if (Vector2.Distance(startPos, endPos) > maxDist)

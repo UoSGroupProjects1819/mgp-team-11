@@ -6,12 +6,15 @@ public class Guard : MonoBehaviour
 {
     public float Stationary;
     private float SleepTime;
-
+    public GameObject seekingSprite;
+    public GameObject detectedSprite;
 
     // Start is called before the first frame update
     void Start()
     {
         SleepTime = Time.time + Stationary;
+        seekingSprite.SetActive(true);
+        detectedSprite.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class Guard : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            seekingSprite.SetActive(false);
+            detectedSprite.SetActive(true);
             other.gameObject.SetActive(false);
             Debug.Log("FAIL");
         }
