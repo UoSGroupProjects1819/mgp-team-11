@@ -46,7 +46,7 @@ public class Ball_movement : MonoBehaviour
             aiming = true;
         }
 
-        if (Input.GetMouseButtonUp(0) == true && aiming && ready)
+        if (Input.GetMouseButtonUp(0) == true && aiming)
         {
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Shoot();
@@ -80,10 +80,6 @@ public class Ball_movement : MonoBehaviour
         moves++;
         aiming = false;
         Debug.Log("Shooting @ " + endPos.ToString());
-        /*if (Vector2.Distance(startPos, endPos) > maxDist)
-        *{
-        *    
-        }*/
 
         Vector3 direction = startPos - endPos;
         rigid.AddForce(direction * speed);
