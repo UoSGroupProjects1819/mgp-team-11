@@ -15,7 +15,7 @@ public class LevelExit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        multipler = 0.2;
+        multipler = 0.2f;
     }
 
     // Update is called once per frame

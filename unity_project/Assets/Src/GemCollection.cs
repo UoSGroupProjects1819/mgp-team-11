@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class GemCollection : MonoBehaviour
 {
-    public Rigidbody2D RigidBody2D;
-    public GameObject score;
+    public int value;
 
     // Start is called before the first frame update
     void Start()
     {
-        RigidBody2D = this.GetComponent<Rigidbody2D>();
 
     }
 
@@ -20,12 +18,12 @@ public class GemCollection : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.tag == "Gem")
+        if (other.gameObject.tag == "Player")
         {
-            collision.gameObject.SetActive(false);
-            score.GetComponent<scoring>().score += 1;
+            this.gameObject.SetActive(false);
+            other.gameObject.GetComponent<Ball_movement>().score += value;
         }
     }
 }

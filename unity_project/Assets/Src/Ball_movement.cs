@@ -17,6 +17,7 @@ public class Ball_movement : MonoBehaviour
     private float SpawnX;
     private float SpawnY;
     private Vector2 SpawnArea;
+    public float score;
 
     // Start is called before the first frame update
     void Start()
