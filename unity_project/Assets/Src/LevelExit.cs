@@ -38,6 +38,10 @@ public class LevelExit : MonoBehaviour
                 movesOver = total - par;
                 levelScore = levelScore / (1 + (0.2f * movesOver));
             }
+            Debug.Log(levelScore);
+            Debug.Log(Mathf.Round(levelScore / 5)*5);
+            levelScore = Mathf.Round(levelScore / 5) * 5;
+
             other.gameObject.GetComponent<Ball_movement>().score += levelScore;
             other.gameObject.SetActive(false);
         }
