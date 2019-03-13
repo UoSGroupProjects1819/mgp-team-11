@@ -23,6 +23,7 @@ public class GemCollection : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             this.gameObject.SetActive(false);
+            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
             other.gameObject.GetComponent<Ball_movement>().score += value;
         }
     }

@@ -18,6 +18,10 @@ public class Ball_movement : MonoBehaviour
     private float SpawnY;
     private Vector2 SpawnArea;
     public float score;
+    public GameObject sceneCamera;
+    private float playerX;
+    private float playerY;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +32,18 @@ public class Ball_movement : MonoBehaviour
         line.GetComponent<LineRenderer>().enabled = true;
         rigid = this.GetComponent<Rigidbody2D>();
         transform.position = SpawnArea;
+        playerX = this.transform.position.x;
+        playerY = this.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (this.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f)
+        if (this.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f && isActiveAndEnabled)
         {
+            playerX = this.transform.position.x;
+            playerY = this.transform.position.y;
+            sceneCamera.transform.position = new Vector3(playerX, playerY, -10);
             ready = true;
         }
         else
