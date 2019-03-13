@@ -39,7 +39,7 @@ public class Ball_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f && isActiveAndEnabled)
+        if (this.GetComponent<Rigidbody2D>().velocity.magnitude == 0 && isActiveAndEnabled)
         {
             playerX = this.transform.position.x;
             playerY = this.transform.position.y;
