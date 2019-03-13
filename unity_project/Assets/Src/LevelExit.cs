@@ -6,12 +6,16 @@ public class LevelExit : MonoBehaviour
 {
 
     public int par;
+    public float newScore;
+    public float levelScore;
+    private float multipler;
+    private int movesOver;
     private int total;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        multipler = 0.2;
     }
 
     // Update is called once per frame
@@ -27,18 +31,16 @@ public class LevelExit : MonoBehaviour
             Debug.Log("level complete!");
             other.gameObject.SetActive(false);
             total = other.gameObject.GetComponent<Ball_movement>().moves;
+            newScore = other.gameObject.GetComponent<Ball_movement>().score;
             Debug.Log(total);
             if (total > par)
             {
-                Debug.Log("Over par! :(");
+                movesOver = total - par;
+                levelScore = levelScore / (1 +(multipler * movesOver));
             }
-            else if (total < par)
+            else if (total < par || total == par)
             {
-                Debug.Log("Under par! :)");
-            }
-            else if (total == par)
-            {
-                Debug.Log("On par! :)" );
+                newScore += levelScore;
             }
         }
     }
