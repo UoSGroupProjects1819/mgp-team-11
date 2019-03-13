@@ -175,8 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stationary: 4
-  seekingSprite: {fileID: 0}
-  detectedSprite: {fileID: 0}
+  seekingSprite: {fileID: 5522998335441787865}
+  detectedSprite: {fileID: 1639959892}
 --- !u!61 &1853459858
 BoxCollider2D:
   m_ObjectHideFlags: 0

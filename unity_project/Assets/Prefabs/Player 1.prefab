@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1770707487914827132}
   - component: {fileID: 4277051888890216141}
   - component: {fileID: 3864812847379667835}
-  - component: {fileID: 4140883360874176015}
   - component: {fileID: 1490355594072353513}
   - component: {fileID: 4485003221384512516}
   m_Layer: 0
@@ -124,22 +123,9 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   maxDist: 3
-  rigid: {fileID: 0}
+  rigid: {fileID: 4277051888890216141}
   moves: 0
---- !u!114 &4140883360874176015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5053744009140702932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e78559d04d1d9dc4083276d326698a2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RigidBody2D: {fileID: 0}
-  score: {fileID: 0}
+  Spawn: {fileID: 0}
 --- !u!61 &1490355594072353513
 BoxCollider2D:
   m_ObjectHideFlags: 0
