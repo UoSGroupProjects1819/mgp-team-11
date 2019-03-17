@@ -8,8 +8,8 @@ public class VentsMovement : MonoBehaviour
     private float VentX;
     private float VentY;
     private Vector2 VentPos;
-    public int VentX_Offset;
-    public int VentY_Offset;
+    public float VentX_Offset;
+    public float VentY_Offset;
     private float SleepTime;
 
     // Start is called before the first frame update
