@@ -126,9 +126,10 @@ MonoBehaviour:
   rigid: {fileID: 4277051888890216141}
   speedSelector: 23000000320000004b000000
   moves: 0
-  Spawn: {fileID: 0}
+  Spawn: {fileID: 8192546491133186449, guid: 1ff8a1bb6acebf84ab4e13da8d893555, type: 3}
   score: 0
-  sceneCamera: {fileID: 0}
+  sceneCamera: {fileID: 4544318687002978483, guid: 8249e57e60d0b6e4792935ae920ad196,
+    type: 3}
 --- !u!61 &1490355594072353513
 BoxCollider2D:
   m_ObjectHideFlags: 0
