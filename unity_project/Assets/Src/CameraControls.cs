@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraControls : MonoBehaviour
 {
     public Camera Camera;
+    public float CameraSize;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class CameraControls : MonoBehaviour
         
         if (Input.GetKey("c"))
         {
-            Camera.orthographicSize = 15.0f;
+            Camera.orthographicSize = CameraSize;
         }
         else
         {
