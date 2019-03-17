@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball_movement : MonoBehaviour
+public class BallMovement : MonoBehaviour
 {
     public bool aiming;
     public float speed;

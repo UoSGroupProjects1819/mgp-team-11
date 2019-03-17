@@ -32,7 +32,7 @@ public class LevelExit : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("level complete!");
-            total = other.gameObject.GetComponent<Ball_movement>().moves;
+            total = other.gameObject.GetComponent<BallMovement>().moves;
             if (total > par)
             {
                 movesOver = total - par;
@@ -42,7 +42,7 @@ public class LevelExit : MonoBehaviour
             Debug.Log(Mathf.Round(levelScore / 5)*5);
             levelScore = Mathf.Round(levelScore / 5) * 5;
 
-            other.gameObject.GetComponent<Ball_movement>().score += levelScore;
+            other.gameObject.GetComponent<BallMovement>().score += levelScore;
             other.gameObject.SetActive(false);
         }
     }

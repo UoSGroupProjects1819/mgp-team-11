@@ -18,13 +18,13 @@ public class GemCollection : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             this.gameObject.SetActive(false);
             other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
-            other.gameObject.GetComponent<Ball_movement>().score += value;
+            other.gameObject.GetComponent<BallMovement>().score += value;
         }
     }
 }
