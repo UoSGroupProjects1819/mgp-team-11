@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraControls : MonoBehaviour
 {
     public Camera Camera;
-    public bool keyPressed;
 
     // Start is called before the first frame update
     void Start()
