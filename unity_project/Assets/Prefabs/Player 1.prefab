@@ -97,7 +97,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -117,15 +117,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiming: 0
-  speed: 25
+  speed: 35
   ready: 0
   line: {fileID: 4485003221384512516}
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   maxDist: 3
   rigid: {fileID: 4277051888890216141}
+  speedSelector: 23000000320000004b000000
   moves: 0
   Spawn: {fileID: 0}
+  score: 0
+  sceneCamera: {fileID: 0}
 --- !u!61 &1490355594072353513
 BoxCollider2D:
   m_ObjectHideFlags: 0

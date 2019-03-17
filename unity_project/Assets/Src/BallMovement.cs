@@ -12,6 +12,7 @@ public class BallMovement : MonoBehaviour
     public Vector3 endPos;
     public float maxDist;
     public Rigidbody2D rigid;
+    public int[] speedSelector;
     public int moves;
     public GameObject Spawn;
     private float SpawnX;
@@ -19,6 +20,7 @@ public class BallMovement : MonoBehaviour
     private Vector2 SpawnArea;
     public float score;
     public GameObject sceneCamera;
+    private int speedCounter;
     private float playerX;
     private float playerY;
 
@@ -39,6 +41,7 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (this.GetComponent<Rigidbody2D>().velocity.magnitude == 0 && isActiveAndEnabled)
         {
             playerX = this.transform.position.x;
@@ -51,6 +54,7 @@ public class BallMovement : MonoBehaviour
             ready = false;
         }
 
+
         if (Input.GetMouseButton(0) && ready && !aiming)
         {
             aiming = true;
@@ -61,6 +65,7 @@ public class BallMovement : MonoBehaviour
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Shoot();
         }
+
 
         if (aiming)
         {
@@ -82,6 +87,16 @@ public class BallMovement : MonoBehaviour
         else
         {
             line.GetComponent<LineRenderer>().enabled = false;
+        }
+
+        if (Input.GetKeyDown("s"))
+        {
+            speedCounter++;
+            if (speedCounter > 2)
+            {
+                speedCounter = 0;
+            }
+            speed = speedSelector[speedCounter];
         }
     }
 
