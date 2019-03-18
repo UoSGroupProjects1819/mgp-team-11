@@ -33,7 +33,7 @@ public class BallMovement : MonoBehaviour
         SpawnArea = new Vector2(SpawnX, SpawnY);
         line.GetComponent<LineRenderer>().enabled = true;
         rigid = this.GetComponent<Rigidbody2D>();
-        transform.position = SpawnArea;
+        this.transform.position = SpawnArea;
         playerX = this.transform.position.x;
         playerY = this.transform.position.y;
     }
