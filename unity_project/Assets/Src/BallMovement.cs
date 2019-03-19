@@ -13,6 +13,7 @@ public class BallMovement : MonoBehaviour
     public float maxDist;
     public Rigidbody2D rigid;
     public int[] speedSelector;
+    public int[] colourSelector;
     public int moves;
     public GameObject Spawn;
     private float SpawnX;
@@ -21,8 +22,12 @@ public class BallMovement : MonoBehaviour
     public float score;
     public GameObject sceneCamera;
     private int speedCounter;
+    private int lineColour;
     private float playerX;
     private float playerY;
+    Color c1 = Color.green;
+    Color c2 = Color.yellow;
+    Color c3 = Color.red;
 
 
     // Start is called before the first frame update
@@ -97,6 +102,19 @@ public class BallMovement : MonoBehaviour
                 speedCounter = 0;
             }
             speed = speedSelector[speedCounter];
+
+            if (speedCounter == 0)
+            {
+                line.startColor = c1;
+            }
+            else if (speedCounter == 1)
+            {
+                line.startColor = c2;
+            } 
+            else
+            {
+                line.startColor = c3;
+            }
         }
     }
 
