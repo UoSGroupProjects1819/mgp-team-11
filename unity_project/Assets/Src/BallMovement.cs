@@ -105,14 +105,17 @@ public class BallMovement : MonoBehaviour
 
             if (speedCounter == 0)
             {
+                maxDist = 3;
                 line.startColor = c1;
             }
             else if (speedCounter == 1)
             {
+                maxDist = 4;
                 line.startColor = c2;
             } 
             else
             {
+                maxDist = 5;
                 line.startColor = c3;
             }
         }
