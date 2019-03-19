@@ -41,6 +41,7 @@ public class Guard : MonoBehaviour
             seekingSprite.SetActive(false);
             detectedSprite.SetActive(true);
             other.gameObject.transform.position = new Vector2(spawnX, spawnY);
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
         }
     }
