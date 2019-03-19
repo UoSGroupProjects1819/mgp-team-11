@@ -47,7 +47,7 @@ public class BallMovement : MonoBehaviour
     void Update()
     {
 
-        if (this.GetComponent<Rigidbody2D>().velocity.magnitude == 0 && isActiveAndEnabled)
+        if (this.GetComponent<Rigidbody2D>().velocity.magnitude <= 0.05 && isActiveAndEnabled)
         {
             playerX = this.transform.position.x;
             playerY = this.transform.position.y;
