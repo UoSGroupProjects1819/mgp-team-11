@@ -1065,6 +1065,7 @@ MonoBehaviour:
   maxDist: 3
   rigid: {fileID: 1311573943}
   speedSelector: 23000000320000004b000000
+  colourSelector: 
   moves: 0
   Spawn: {fileID: 2045587244}
   score: 0
@@ -1150,7 +1151,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.003921569, g: 0.8, b: 0.003921569, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1199,6 +1200,7 @@ GameObject:
   - component: {fileID: 1311573942}
   - component: {fileID: 1311573944}
   - component: {fileID: 5391589161086862457}
+  - component: {fileID: 1311573948}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -1206,6 +1208,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1311573948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311573947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7829d935573ed14f871bf44a1ea87f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiming: 0
+  speed: 0
+  ready: 0
+  line: {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  maxDist: 0
+  rigid: {fileID: 0}
+  speedSelector: 
+  colourSelector: 
+  moves: 0
+  Spawn: {fileID: 0}
+  score: 0
+  sceneCamera: {fileID: 0}
 --- !u!1 &1318510793
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class Guard : MonoBehaviour
     private float SleepTime;
     public GameObject seekingSprite;
     public GameObject detectedSprite;
+    public GameObject playerSpawn;
+    public float spawnX;
+    public float spawnY;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +18,8 @@ public class Guard : MonoBehaviour
         SleepTime = Time.time + Stationary;
         seekingSprite.SetActive(true);
         detectedSprite.SetActive(false);
+        spawnX = playerSpawn.transform.position.x;
+        spawnY = playerSpawn.transform.position.y;
     }
 
     // Update is called once per frame
@@ -24,6 +29,8 @@ public class Guard : MonoBehaviour
         {
             transform.Rotate(0, 0, 90);
             SleepTime = Time.time + Stationary;
+            seekingSprite.SetActive(true);
+            detectedSprite.SetActive(false);
         }
     }
 
@@ -33,8 +40,8 @@ public class Guard : MonoBehaviour
         {
             seekingSprite.SetActive(false);
             detectedSprite.SetActive(true);
-            other.gameObject.SetActive(false);
-            Debug.Log("FAIL");
+            other.gameObject.transform.position = new Vector2(spawnX, spawnY);
+
         }
     }
 }
