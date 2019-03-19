@@ -43,15 +43,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Play area
+  - name: Floor
     uniqueID: 2743021437
     locked: 0
   - name: Walls
     uniqueID: 667463061
     locked: 0
-  - name: Floor
+  - name: Vents
+    uniqueID: 625266053
+    locked: 0
+  - name: Guards
     uniqueID: 392904247
     locked: 0
-  - name: New Layer
+  - name: Gems
     uniqueID: 2516355589
+    locked: 0
+  - name: Player
+    uniqueID: 752744811
     locked: 0
