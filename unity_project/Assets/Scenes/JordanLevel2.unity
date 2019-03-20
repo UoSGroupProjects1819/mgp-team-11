@@ -1763,11 +1763,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4544318687002978481, guid: 8249e57e60d0b6e4792935ae920ad196,
-        type: 3}
-      propertyPath: orthographic size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
         type: 3}
       propertyPath: CameraSize
@@ -1778,6 +1773,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1457064194}
+    - target: {fileID: 4544318687002978481, guid: 8249e57e60d0b6e4792935ae920ad196,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8249e57e60d0b6e4792935ae920ad196, type: 3}
 --- !u!1001 &733251019
@@ -2505,6 +2505,10 @@ PrefabInstance:
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 521839230}
+    - target: {fileID: 1853459857, guid: 8268206723c9ea44d8f5d18078ef64c9, type: 3}
+      propertyPath: Stationary
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1639959894, guid: 8268206723c9ea44d8f5d18078ef64c9, type: 3}
       propertyPath: m_SortingLayerID
       value: 392904247
@@ -2841,6 +2845,10 @@ PrefabInstance:
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 521839230}
+    - target: {fileID: 1853459857, guid: 8268206723c9ea44d8f5d18078ef64c9, type: 3}
+      propertyPath: Stationary
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1639959894, guid: 8268206723c9ea44d8f5d18078ef64c9, type: 3}
       propertyPath: m_SortingLayerID
       value: 392904247
@@ -3028,6 +3036,11 @@ PrefabInstance:
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 521839230}
+    - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: Stationary
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 827423145, guid: e257ca206baed6849963b1a43ff708b8, type: 3}
       propertyPath: m_SortingLayerID
       value: 392904247
@@ -4142,6 +4155,11 @@ PrefabInstance:
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 521839230}
+    - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: Stationary
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 827423146, guid: e257ca206baed6849963b1a43ff708b8, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
