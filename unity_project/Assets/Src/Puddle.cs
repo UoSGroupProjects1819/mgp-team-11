@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Puddle : MonoBehaviour
 {
+
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,6 @@ public class Puddle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.GetComponent<Rigidbody2D>().velocity = collision.gameObject.GetComponent<Rigidbody2D>().velocity * 6;
+        collision.gameObject.GetComponent<Rigidbody2D>().velocity = collision.gameObject.GetComponent<Rigidbody2D>().velocity * speed;
     }
 }
