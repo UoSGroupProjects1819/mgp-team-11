@@ -325,6 +325,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45d246a25ae06343b334816515662fe, type: 3}
+--- !u!1 &156613241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 943219360, guid: b45d246a25ae06343b334816515662fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 156613240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &156675218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3473,6 +3479,10 @@ PrefabInstance:
       propertyPath: VentY_Offset
       value: -0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 943219364, guid: b45d246a25ae06343b334816515662fe, type: 3}
+      propertyPath: ExitVent
+      value: 
+      objectReference: {fileID: 156613241}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45d246a25ae06343b334816515662fe, type: 3}
 --- !u!1 &1510314995 stripped
