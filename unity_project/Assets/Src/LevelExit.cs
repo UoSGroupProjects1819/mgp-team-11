@@ -16,6 +16,7 @@ public class LevelExit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class LevelExit : MonoBehaviour
         
     }
     public void SceneSwitch() {
+        //Changes the scene
         SceneManager.LoadScene(nextSceneIndex);
     }
 
@@ -32,7 +34,7 @@ public class LevelExit : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("level complete!");
+            //Works out how many moves the player took and adjusts the score accordingly 
             total = other.gameObject.GetComponent<BallMovement>().moves;
             if (total > par)
             {

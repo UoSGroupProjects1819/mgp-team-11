@@ -4,54 +4,50 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    public bool aiming;
-    public float speed;
-    public bool ready;
-    public LineRenderer line;
-    public Vector3 startPos;
-    public Vector3 endPos;
-    public float maxDist;
-    public Rigidbody2D rigid;
-    public int[] speedSelector;
-    public int[] colourSelector;
-    public int moves;
+    public float score;
     public GameObject Spawn;
+    public int[] speedSelector;
+    public GameObject sceneCamera;
+    public Rigidbody2D rigid;
+    public LineRenderer line;
+    public int moves;
+
+    private bool aiming;
+    private float speed;
+    private bool ready;
+    private Vector3 startPos;
+    private Vector3 endPos;
+    private float maxDist;
+    
     private float SpawnX;
     private float SpawnY;
     private Vector2 SpawnArea;
-    public float score;
-    public GameObject sceneCamera;
     private int speedCounter;
     private int lineColour;
-    private float playerX;
-    private float playerY;
-    Color c1 = Color.green;
-    Color c2 = Color.yellow;
-    Color c3 = Color.red;
+    private Color c1 = Color.green;
+    private Color c2 = Color.yellow;
+    private Color c3 = Color.red;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //Gets the x y pos location of Spawn gameobject, then sets the player pos to the same x y
         SpawnX = Spawn.transform.position.x;
         SpawnY = Spawn.transform.position.y;
         SpawnArea = new Vector2(SpawnX, SpawnY);
+        this.transform.position = SpawnArea;
+
         line.GetComponent<LineRenderer>().enabled = true;
         rigid = this.GetComponent<Rigidbody2D>();
-        this.transform.position = SpawnArea;
-        playerX = this.transform.position.x;
-        playerY = this.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //Checks if the ball is "not moving (0.05 velocity) and is enabled(game object gets disabled in vent script)
         if (this.GetComponent<Rigidbody2D>().velocity.magnitude <= 0.05 && isActiveAndEnabled)
         {
-            playerX = this.transform.position.x;
-            playerY = this.transform.position.y;
-            sceneCamera.transform.position = new Vector3(playerX, playerY, -10);
             ready = true;
         }
         else
@@ -74,6 +70,7 @@ public class BallMovement : MonoBehaviour
 
         if (aiming)
         {
+            //Enable line render, and work out the direction it faces
             line.GetComponent<LineRenderer>().enabled = true;
             startPos = this.transform.position;
             line.GetComponent<LineRenderer>().SetPosition(0, startPos);
@@ -82,6 +79,7 @@ public class BallMovement : MonoBehaviour
             shootPos = this.transform.position + (this.transform.position - shootPos);
             endPos = shootPos;
 
+            //Sets a max limit on the line size
             if (Vector3.Distance(startPos, shootPos) > maxDist)
             {
                 Vector3 dir = endPos - startPos;
@@ -94,8 +92,10 @@ public class BallMovement : MonoBehaviour
             line.GetComponent<LineRenderer>().enabled = false;
         }
 
+
         if (Input.GetKeyDown("s"))
         {
+            //Allows changing of the speed of the player by looping through an array of speeds. Also changes line colour based off speed
             speedCounter++;
             if (speedCounter > 2)
             {
@@ -125,9 +125,9 @@ public class BallMovement : MonoBehaviour
     {
         moves++;
         aiming = false;
-        Debug.Log("Shooting @ " + endPos.ToString());
 
         Vector3 direction = startPos - endPos;
+        //Adds force to the player
         rigid.AddForce(direction * speed);
     }
 

@@ -22,8 +22,8 @@ public class GemCollection : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            //Set gem inactive and award points to the player based off gem value
             this.gameObject.SetActive(false);
-            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 0), ForceMode2D.Impulse);
             other.gameObject.GetComponent<BallMovement>().score += value;
         }
     }

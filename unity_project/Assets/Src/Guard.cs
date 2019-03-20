@@ -6,18 +6,20 @@ public class Guard : MonoBehaviour
 {
     public float Stationary;
     private float SleepTime;
-    public GameObject seekingSprite;
-    public GameObject detectedSprite;
+    private GameObject seekingSprite;
+    private GameObject detectedSprite;
     public GameObject playerSpawn;
-    public float spawnX;
-    public float spawnY;
+    private float spawnX;
+    private float spawnY;
 
     // Start is called before the first frame update
     void Start()
     {
+        //SleepTime is used to rotate the player 
         SleepTime = Time.time + Stationary;
         seekingSprite.SetActive(true);
         detectedSprite.SetActive(false);
+        //Sets the playerSpawnpoint so the player can be teleported back
         spawnX = playerSpawn.transform.position.x;
         spawnY = playerSpawn.transform.position.y;
     }
@@ -27,6 +29,7 @@ public class Guard : MonoBehaviour
     {
         if (Time.time > SleepTime)
         {
+            //Roatates the guard 90 degrees and updates sleeptime, resets the vision sprites
             transform.Rotate(0, 0, 90);
             SleepTime = Time.time + Stationary;
             seekingSprite.SetActive(true);
@@ -38,6 +41,7 @@ public class Guard : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            //When colliding with the player, it changes the active vision sprite and moves the player back to the spawn, removing any force.
             seekingSprite.SetActive(false);
             detectedSprite.SetActive(true);
             other.gameObject.transform.position = new Vector2(spawnX, spawnY);
