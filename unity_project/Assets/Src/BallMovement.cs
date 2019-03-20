@@ -11,22 +11,18 @@ public class BallMovement : MonoBehaviour
     public Rigidbody2D rigid;
     public LineRenderer line;
     public int moves;
-    public float SpawnX;
-    public float SpawnY;
-    public Vector2 SpawnArea;
-    public Vector3 startPos;
-    public Vector3 endPos;
-    public bool aiming;
-    public bool ready;
+    private float SpawnX;
+    private float SpawnY;
+    private Vector2 SpawnArea;
+    private Vector3 startPos;
+    private Vector3 endPos;
+    private bool aiming;
+    private bool ready;
 
     private float speed;
     private float maxDist;
     private bool shooting;
-    private int speedCounter;
-    private int lineColour;
-    private Color c1 = Color.green;
-    private Color c2 = Color.yellow;
-    private Color c3 = Color.red;
+
 
 
     // Start is called before the first frame update
@@ -38,7 +34,8 @@ public class BallMovement : MonoBehaviour
         SpawnY = Spawn.transform.position.y;
         SpawnArea = new Vector2(SpawnX, SpawnY);
         this.transform.position = SpawnArea;
-
+        speed = 75;
+        maxDist = 5;
         line.GetComponent<LineRenderer>().enabled = true;
         rigid = this.GetComponent<Rigidbody2D>();
     }
@@ -95,34 +92,6 @@ public class BallMovement : MonoBehaviour
         else
         {
             line.GetComponent<LineRenderer>().enabled = false;
-        }
-
-
-        if (Input.GetKeyDown("s"))
-        {
-            //Allows changing of the speed of the player by looping through an array of speeds. Also changes line colour based off speed
-            speedCounter++;
-            if (speedCounter > 2)
-            {
-                speedCounter = 0;
-            }
-            speed = speedSelector[speedCounter];
-
-            if (speedCounter == 0)
-            {
-                maxDist = 3;
-                line.startColor = c1;
-            }
-            else if (speedCounter == 1)
-            {
-                maxDist = 4;
-                line.startColor = c2;
-            } 
-            else
-            {
-                maxDist = 5;
-                line.startColor = c3;
-            }
         }
     }
 
