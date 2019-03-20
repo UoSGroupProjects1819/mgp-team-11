@@ -4347,6 +4347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   par: 4
   levelScore: 1000
+  nextSceneIndex: 2
 --- !u!1 &2424900919891276927
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class LevelExit : MonoBehaviour
     public float levelScore;
     private int movesOver;
     private int total;
+    public int nextSceneIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class LevelExit : MonoBehaviour
         
     }
     public void SceneSwitch() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
 
@@ -44,6 +45,7 @@ public class LevelExit : MonoBehaviour
 
             other.gameObject.GetComponent<BallMovement>().score += levelScore;
             other.gameObject.SetActive(false);
+            SceneSwitch();
         }
     }
 }
