@@ -16,14 +16,12 @@ public class BallMovement : MonoBehaviour
     public Vector2 SpawnArea;
     public Vector3 startPos;
     public Vector3 endPos;
-
     public bool aiming;
-    private float speed;
     public bool ready;
-    
-    private float maxDist;
-    
 
+    private float speed;
+    private float maxDist;
+    private bool shooting;
     private int speedCounter;
     private int lineColour;
     private Color c1 = Color.green;
@@ -34,6 +32,7 @@ public class BallMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        shooting = false;
         //Gets the x y pos location of Spawn gameobject, then sets the player pos to the same x y
         SpawnX = Spawn.transform.position.x;
         SpawnY = Spawn.transform.position.y;
@@ -47,10 +46,14 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        playerRotate();
+
         //Checks if the ball is "not moving (0.05 velocity) and is enabled(game object gets disabled in vent script)
         if (this.GetComponent<Rigidbody2D>().velocity.magnitude <= 0.05 && isActiveAndEnabled)
         {
             ready = true;
+            shooting = false;
         }
         else
         {
@@ -125,6 +128,7 @@ public class BallMovement : MonoBehaviour
 
     void Shoot()
     {
+        shooting = true;
         moves++;
         aiming = false;
 
@@ -133,4 +137,19 @@ public class BallMovement : MonoBehaviour
         rigid.AddForce(direction * speed);
     }
 
+    //https://youtu.be/_XdqA3xbP2A
+    void playerRotate()
+    {
+        if (!shooting)
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+            Vector2 direction = new Vector2(
+                (mousePosition.x - transform.position.x) * -1,
+                (mousePosition.y - transform.position.y) * -1
+                );
+            transform.up = direction;
+        }
+    }
 }
