@@ -6,8 +6,8 @@ public class Guard : MonoBehaviour
 {
     public float Stationary;
     private float SleepTime;
-    private GameObject seekingSprite;
-    private GameObject detectedSprite;
+    public GameObject seekingSprite;
+    public GameObject detectedSprite;
     public GameObject playerSpawn;
     private float spawnX;
     private float spawnY;

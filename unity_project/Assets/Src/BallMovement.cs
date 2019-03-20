@@ -11,17 +11,19 @@ public class BallMovement : MonoBehaviour
     public Rigidbody2D rigid;
     public LineRenderer line;
     public int moves;
+    public float SpawnX;
+    public float SpawnY;
+    public Vector2 SpawnArea;
+    public Vector3 startPos;
+    public Vector3 endPos;
 
-    private bool aiming;
+    public bool aiming;
     private float speed;
-    private bool ready;
-    private Vector3 startPos;
-    private Vector3 endPos;
+    public bool ready;
+    
     private float maxDist;
     
-    private float SpawnX;
-    private float SpawnY;
-    private Vector2 SpawnArea;
+
     private int speedCounter;
     private int lineColour;
     private Color c1 = Color.green;
