@@ -8,9 +8,7 @@ public class Guard : MonoBehaviour
     private float SleepTime;
     public GameObject seekingSprite;
     public GameObject detectedSprite;
-    public GameObject playerSpawn;
-    private float spawnX;
-    private float spawnY;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +18,8 @@ public class Guard : MonoBehaviour
         seekingSprite.SetActive(true);
         detectedSprite.SetActive(false);
         //Sets the playerSpawnpoint so the player can be teleported back
-        spawnX = playerSpawn.transform.position.x;
-        spawnY = playerSpawn.transform.position.y;
+        //spawnX = playerSpawn.transform.position.x;
+        //spawnY = playerSpawn.transform.position.y;
     }
 
     // Update is called once per frame
@@ -44,7 +42,7 @@ public class Guard : MonoBehaviour
             //When colliding with the player, it changes the active vision sprite and moves the player back to the spawn, removing any force.
             seekingSprite.SetActive(false);
             detectedSprite.SetActive(true);
-            other.gameObject.transform.position = new Vector2(spawnX, spawnY);
+            other.gameObject.transform.position = new Vector2(other.gameObject.GetComponent<BallMovement>().Spawn.gameObject.transform.position.x, other.GetComponent<BallMovement>().Spawn.gameObject.transform.position.y);
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
         }
