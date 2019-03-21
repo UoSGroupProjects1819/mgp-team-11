@@ -17,9 +17,6 @@ public class Guard : MonoBehaviour
         SleepTime = Time.time + Stationary;
         seekingSprite.SetActive(true);
         detectedSprite.SetActive(false);
-        //Sets the playerSpawnpoint so the player can be teleported back
-        //spawnX = playerSpawn.transform.position.x;
-        //spawnY = playerSpawn.transform.position.y;
     }
 
     // Update is called once per frame
