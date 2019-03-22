@@ -116,20 +116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7829d935573ed14f871bf44a1ea87f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiming: 0
-  speed: 35
-  ready: 0
-  line: {fileID: 1051252550}
-  startPos: {x: 0, y: 0, z: 0}
-  endPos: {x: 0, y: 0, z: 0}
-  maxDist: 3
-  rigid: {fileID: 1051252553}
-  speedSelector: 23000000320000004b000000
-  colourSelector: 
-  moves: 0
-  Spawn: {fileID: 0}
   score: 0
+  Spawn: {fileID: 0}
+  speedSelector: 23000000320000004b000000
   sceneCamera: {fileID: 0}
+  rigid: {fileID: 1051252553}
+  line: {fileID: 1051252550}
+  moves: 0
 --- !u!120 &1051252550
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -190,18 +183,18 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.003921569, g: 0.8, b: 0.003921569, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0, g: 1, b: 0, a: 1}
+      key1: {r: 0.9996724, g: 0, b: 0.01601068, a: 1}
+      key2: {r: 0.9811321, g: 0, b: 0.9222151, a: 0}
+      key3: {r: 0.9811321, g: 0, b: 0.9222151, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
       ctime1: 65535
-      ctime2: 0
-      ctime3: 0
+      ctime2: 65535
+      ctime3: 65535
       ctime4: 0
       ctime5: 0
       ctime6: 0
