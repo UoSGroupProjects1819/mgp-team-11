@@ -1487,6 +1487,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1065491880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 299965977620725297, guid: f2e629e4b6298e34d9122e96258afca5,
+    type: 3}
+  m_PrefabInstance: {fileID: 696298893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080914294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,9 +1735,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
+      propertyPath: Gems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 2107784884}
+    - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: Gems.Array.data[0]
+      value: 
+      objectReference: {fileID: 1065491880}
     - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1898,9 +1914,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
+      propertyPath: Gems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 2107784884}
+    - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: Gems.Array.data[0]
+      value: 
+      objectReference: {fileID: 1065491880}
     - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
       propertyPath: m_SortingLayerID
