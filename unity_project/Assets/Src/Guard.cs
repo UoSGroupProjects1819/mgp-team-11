@@ -43,7 +43,7 @@ public class Guard : MonoBehaviour
             for (int i = 0; i < Gems.Length; i++)
             {
                 CurrentGem = Gems[i];
-                CurrentGem.SetActive(false);
+                CurrentGem.SetActive(true);
             }
             other.gameObject.GetComponent<BallMovement>().CurrentGemScore = 0;
             other.gameObject.transform.position = new Vector2(other.gameObject.GetComponent<BallMovement>().Spawn.gameObject.transform.position.x, other.GetComponent<BallMovement>().Spawn.gameObject.transform.position.y);

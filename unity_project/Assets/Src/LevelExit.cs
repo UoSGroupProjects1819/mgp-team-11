@@ -45,7 +45,7 @@ public class LevelExit : MonoBehaviour
             Debug.Log(Mathf.Round(levelScore / 5)*5);
             levelScore = Mathf.Round(levelScore / 5) * 5;
 
-            other.gameObject.GetComponent<BallMovement>().score += levelScore;
+            other.gameObject.GetComponent<BallMovement>().score += levelScore + other.gameObject.GetComponent<BallMovement>().CurrentGemScore;
             other.gameObject.SetActive(false);
             SceneSwitch();
         }
