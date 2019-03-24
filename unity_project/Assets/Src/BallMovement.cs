@@ -11,6 +11,9 @@ public class BallMovement : MonoBehaviour
     public Rigidbody2D rigid;
     public LineRenderer line;
     public int moves;
+    public int CurrentGemScore;
+
+
     private float SpawnX;
     private float SpawnY;
     private Vector2 SpawnArea;
@@ -18,7 +21,6 @@ public class BallMovement : MonoBehaviour
     private Vector3 endPos;
     private bool aiming;
     private bool ready;
-
     private float speed;
     private float maxDist;
     private bool shooting;
