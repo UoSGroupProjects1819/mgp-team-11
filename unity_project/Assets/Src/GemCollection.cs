@@ -24,7 +24,7 @@ public class GemCollection : MonoBehaviour
         {
             //Set gem inactive and award points to the player based off gem value
             this.gameObject.SetActive(false);
-            other.gameObject.GetComponent<BallMovement>().score += value;
+            other.gameObject.GetComponent<BallMovement>().CurrentGemScore += value;
         }
     }
 }
