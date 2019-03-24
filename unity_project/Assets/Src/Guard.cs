@@ -11,7 +11,6 @@ public class Guard : MonoBehaviour
     public GameObject[] Gems;
     private GameObject CurrentGem;
 
-
     // Start is called before the first frame update
     void Start()
     {
