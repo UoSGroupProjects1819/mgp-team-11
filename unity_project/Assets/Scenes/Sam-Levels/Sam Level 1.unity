@@ -821,6 +821,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2424900918017718454, guid: e6c54b269e5bce647bb65950c12af922,
+        type: 3}
+      propertyPath: nextSceneIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3276203014617330074, guid: e6c54b269e5bce647bb65950c12af922,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -835,11 +840,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180.00002
-      objectReference: {fileID: 0}
-    - target: {fileID: 2424900918017718454, guid: e6c54b269e5bce647bb65950c12af922,
-        type: 3}
-      propertyPath: nextSceneIndex
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6325879100757485955, guid: e6c54b269e5bce647bb65950c12af922,
         type: 3}
@@ -1733,6 +1733,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 392904247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
       propertyPath: Gems.Array.size
@@ -1748,16 +1758,6 @@ PrefabInstance:
       propertyPath: Gems.Array.data[0]
       value: 
       objectReference: {fileID: 1065491880}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 392904247
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e257ca206baed6849963b1a43ff708b8, type: 3}
 --- !u!1 &1218184785 stripped
@@ -1912,6 +1912,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 392904247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
       propertyPath: Gems.Array.size
@@ -1927,16 +1937,6 @@ PrefabInstance:
       propertyPath: Gems.Array.data[0]
       value: 
       objectReference: {fileID: 1065491880}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 392904247
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e257ca206baed6849963b1a43ff708b8, type: 3}
 --- !u!1001 &1323496530
@@ -2826,7 +2826,7 @@ PrefabInstance:
     - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
         type: 3}
       propertyPath: CameraSize
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8249e57e60d0b6e4792935ae920ad196, type: 3}

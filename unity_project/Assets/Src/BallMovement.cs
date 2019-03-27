@@ -12,6 +12,7 @@ public class BallMovement : MonoBehaviour
     public LineRenderer line;
     public int moves;
     public int CurrentGemScore;
+    public bool ready;
 
 
     private float SpawnX;
@@ -20,7 +21,7 @@ public class BallMovement : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
     private bool aiming;
-    private bool ready;
+    
     private float speed;
     private float maxDist;
     private bool shooting;

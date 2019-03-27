@@ -1217,7 +1217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1315220411
 PrefabInstance:
@@ -1424,6 +1424,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180.00002
       objectReference: {fileID: 0}
+    - target: {fileID: 2424900918017718454, guid: e6c54b269e5bce647bb65950c12af922,
+        type: 3}
+      propertyPath: nextSceneIndex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c54b269e5bce647bb65950c12af922, type: 3}
 --- !u!1 &1539825279 stripped
@@ -1504,6 +1509,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2132331191}
+    - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
+        type: 3}
+      propertyPath: CameraSize
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8249e57e60d0b6e4792935ae920ad196, type: 3}
 --- !u!1 &1555036826
