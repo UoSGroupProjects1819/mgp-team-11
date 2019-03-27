@@ -13,6 +13,7 @@ public class BallMovement : MonoBehaviour
     //public int moves;
     public int CurrentGemScore;
     public bool ready;
+    public bool aiming;
 
 
     private float SpawnX;
@@ -20,7 +21,7 @@ public class BallMovement : MonoBehaviour
     private Vector2 SpawnArea;
     private Vector3 startPos;
     private Vector3 endPos;
-    private bool aiming;
+    
     
     private float speed;
     private float maxDist;
@@ -50,7 +51,7 @@ public class BallMovement : MonoBehaviour
         playerRotate();
 
         //Checks if the ball is "not moving (0.05 velocity) and is enabled(game object gets disabled in vent script)
-        if (this.GetComponent<Rigidbody2D>().velocity.magnitude <= 0.05 && isActiveAndEnabled)
+        if (this.GetComponent<Rigidbody2D>().velocity.magnitude <= 0.05 && isActiveAndEnabled && sceneCamera.GetComponent<CameraControls>().zoomed == false)
         {
             ready = true;
             shooting = false;

@@ -1160,6 +1160,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e629e4b6298e34d9122e96258afca5, type: 3}
+--- !u!1 &467672315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467672316}
+  m_Layer: 0
+  m_Name: LevelCentre
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467672316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467672315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: 0, z: 0.013581102}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &506159607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1784,6 +1814,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1457064194}
+    - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
+        type: 3}
+      propertyPath: levelCentre
+      value: 
+      objectReference: {fileID: 467672315}
     - target: {fileID: 4544318687002978481, guid: 8249e57e60d0b6e4792935ae920ad196,
         type: 3}
       propertyPath: orthographic size
