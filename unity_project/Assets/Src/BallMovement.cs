@@ -10,7 +10,7 @@ public class BallMovement : MonoBehaviour
     public GameObject sceneCamera;
     public Rigidbody2D rigid;
     public LineRenderer line;
-    public int moves;
+    //public int moves;
     public int CurrentGemScore;
     public bool ready;
 
@@ -101,7 +101,7 @@ public class BallMovement : MonoBehaviour
     void Shoot()
     {
         shooting = true;
-        moves++;
+        //moves++;
         aiming = false;
 
         Vector3 direction = startPos - endPos;
