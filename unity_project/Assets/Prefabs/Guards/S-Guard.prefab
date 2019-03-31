@@ -66,7 +66,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 392904247
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1d1540c3e517e7247ab3daf54ae64621, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 392904247
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: edf694fa85c67964e851f1a466586daf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -228,7 +228,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 392904247
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6cdafa1f8c6eb7d43869e0f662c86ee1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -256,6 +256,7 @@ MonoBehaviour:
   Stationary: 4
   seekingSprite: {fileID: 827423144}
   detectedSprite: {fileID: 1245265613}
+  Gems: []
 --- !u!60 &1160518453818155040
 PolygonCollider2D:
   m_ObjectHideFlags: 0
