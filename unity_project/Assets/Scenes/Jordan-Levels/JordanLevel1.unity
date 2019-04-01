@@ -2203,6 +2203,7 @@ MonoBehaviour:
   CameraSize: 15
   player: {fileID: 1075757479}
   levelCentre: {fileID: 1250612008}
+  zoomed: 0
 --- !u!1001 &316266470376455078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2210,6 +2211,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1777756104809585083}
     m_Modifications:
+    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 3333510346368857078, guid: 743ba912f8927f34a906588a74561112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2264,16 +2275,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2705269608677462628, guid: 45a581e143197f84da50691af17ef47b,
         type: 3}
@@ -3056,6 +3057,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2705269608107905485}
     m_Modifications:
+    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 3333510346368857078, guid: 743ba912f8927f34a906588a74561112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3110,16 +3121,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2705269608677462628, guid: 45a581e143197f84da50691af17ef47b,
         type: 3}
@@ -3652,6 +3653,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1777756104809585083}
     m_Modifications:
+    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 3333510346368857078, guid: 743ba912f8927f34a906588a74561112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3706,16 +3717,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2705269608677462628, guid: 45a581e143197f84da50691af17ef47b,
         type: 3}
@@ -3905,7 +3906,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3948,7 +3949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728d2a60c81a31943b55ffa6c689b779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  par: 4
   levelScore: 1000
   nextSceneIndex: 3
 --- !u!1 &2424900919891276927
@@ -3976,6 +3976,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2705269608107905485}
     m_Modifications:
+    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 3333510346368857078, guid: 743ba912f8927f34a906588a74561112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4030,16 +4040,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2705269608677462628, guid: 45a581e143197f84da50691af17ef47b,
         type: 3}
@@ -4429,6 +4429,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1777756104809585083}
     m_Modifications:
+    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 3333510346368857078, guid: 743ba912f8927f34a906588a74561112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4483,16 +4493,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2705269608677462628, guid: 45a581e143197f84da50691af17ef47b,
         type: 3}
@@ -4951,6 +4951,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4111072824638160996}
     m_Modifications:
+    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 3333510346368857078, guid: 743ba912f8927f34a906588a74561112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5015,16 +5025,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2705269608677462628, guid: 45a581e143197f84da50691af17ef47b,
         type: 3}
@@ -5100,6 +5100,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2705269608107905485}
     m_Modifications:
+    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
+        type: 3}
+      propertyPath: m_Name
+      value: brown_beige_wall_corner (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 3333510346368857078, guid: 743ba912f8927f34a906588a74561112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5154,16 +5164,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 6052387634133564646, guid: 743ba912f8927f34a906588a74561112,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6207590937662445972, guid: 45a581e143197f84da50691af17ef47b,
-        type: 3}
-      propertyPath: m_Name
-      value: brown_beige_wall_corner (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2705269608677462628, guid: 45a581e143197f84da50691af17ef47b,
         type: 3}
