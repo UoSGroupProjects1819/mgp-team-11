@@ -1429,6 +1429,11 @@ PrefabInstance:
       propertyPath: nextSceneIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2424900918017718452, guid: e6c54b269e5bce647bb65950c12af922,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c54b269e5bce647bb65950c12af922, type: 3}
 --- !u!1 &1539825279 stripped
@@ -1512,8 +1517,13 @@ PrefabInstance:
     - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
         type: 3}
       propertyPath: CameraSize
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
+        type: 3}
+      propertyPath: levelCentre
+      value: 
+      objectReference: {fileID: 1757121298}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8249e57e60d0b6e4792935ae920ad196, type: 3}
 --- !u!1 &1555036826
@@ -1594,6 +1604,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1757121298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757121299}
+  m_Layer: 0
+  m_Name: LevelCentre
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1757121299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757121298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.38, y: -4.93, z: -12.104615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1780653593
 PrefabInstance:
