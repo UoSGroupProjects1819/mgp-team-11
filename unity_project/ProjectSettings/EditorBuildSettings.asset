@@ -29,9 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alex-Levels/scene1.unity
     guid: d3c2c5ac6a63f5b4284caa7c806cf0b6
-  - enabled: 1
-    path: Assets/Scenes/Alex-Levels/scene2.unity
-    guid: 637789818f1cc584faca2bbd76b9996d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

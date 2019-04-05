@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stationary: 4
   seekingSprite: {fileID: 6092748792859028171}
-  detectedSprite: {fileID: 0}
+  detectedSprite: {fileID: 2661054635206363344}
   Gems: []
 --- !u!60 &7814731481872773501
 PolygonCollider2D:

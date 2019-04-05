@@ -1733,16 +1733,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 392904247
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
       propertyPath: Gems.Array.size
@@ -1758,6 +1748,16 @@ PrefabInstance:
       propertyPath: Gems.Array.data[0]
       value: 
       objectReference: {fileID: 1065491880}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 392904247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e257ca206baed6849963b1a43ff708b8, type: 3}
 --- !u!1 &1218184785 stripped
@@ -1912,16 +1912,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 392904247
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7427121474449652434, guid: e257ca206baed6849963b1a43ff708b8,
         type: 3}
       propertyPath: Gems.Array.size
@@ -1937,6 +1927,16 @@ PrefabInstance:
       propertyPath: Gems.Array.data[0]
       value: 
       objectReference: {fileID: 1065491880}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 392904247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148897898662516883, guid: e257ca206baed6849963b1a43ff708b8,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e257ca206baed6849963b1a43ff708b8, type: 3}
 --- !u!1001 &1323496530
@@ -2593,6 +2593,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1673369600}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1675170887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675170888}
+  m_Layer: 0
+  m_Name: LevelCentre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1675170888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675170887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.63, y: -1.03, z: -0.2033882}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911948535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,8 +2856,13 @@ PrefabInstance:
     - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
         type: 3}
       propertyPath: CameraSize
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 140755153424522466, guid: 8249e57e60d0b6e4792935ae920ad196,
+        type: 3}
+      propertyPath: levelCentre
+      value: 
+      objectReference: {fileID: 1675170887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8249e57e60d0b6e4792935ae920ad196, type: 3}
 --- !u!1 &2107784884 stripped
