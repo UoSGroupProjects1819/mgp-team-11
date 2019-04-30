@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BallMovement : MonoBehaviour
 {
+    public GameObject textDisplay;
+    public Text displayScore;
     public float score;
     public GameObject Spawn;
     public int[] speedSelector;
@@ -14,7 +17,6 @@ public class BallMovement : MonoBehaviour
     public int CurrentGemScore;
     public bool ready;
     public bool aiming;
-
 
     private float SpawnX;
     private float SpawnY;
@@ -32,6 +34,7 @@ public class BallMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        textDisplay.SetActive(false);
         shooting = false;
         //Gets the x y pos location of Spawn gameobject, then sets the player pos to the same x y
         SpawnX = Spawn.transform.position.x;
@@ -49,6 +52,17 @@ public class BallMovement : MonoBehaviour
     {
 
         playerRotate();
+
+
+        if (sceneCamera.GetComponent<CameraControls>().zoomed == true)
+        {
+            displayScore.text = "Score: " + CurrentGemScore;
+            textDisplay.SetActive(true);
+        }
+        else
+        {
+            textDisplay.SetActive(false);
+        }
 
         //Checks if the ball is "not moving (0.05 velocity) and is enabled(game object gets disabled in vent script)
         if (this.GetComponent<Rigidbody2D>().velocity.magnitude <= 0.05 && isActiveAndEnabled && sceneCamera.GetComponent<CameraControls>().zoomed == false)
