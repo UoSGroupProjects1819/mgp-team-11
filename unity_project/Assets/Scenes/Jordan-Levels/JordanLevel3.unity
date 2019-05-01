@@ -1019,6 +1019,14 @@ PrefabInstance:
       propertyPath: sceneCamera
       value: 
       objectReference: {fileID: 1898100984}
+    - target: {fileID: 1051252552, guid: 0bbea43d7bb9b69439b9e83ea8fdb98f, type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1933727868}
+    - target: {fileID: 1051252552, guid: 0bbea43d7bb9b69439b9e83ea8fdb98f, type: 3}
+      propertyPath: displayScore
+      value: 
+      objectReference: {fileID: 1933727871}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bbea43d7bb9b69439b9e83ea8fdb98f, type: 3}
 --- !u!1001 &1565420331
