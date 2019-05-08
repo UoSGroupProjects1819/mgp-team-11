@@ -53,6 +53,11 @@ public class BallMovement : MonoBehaviour
 
         playerRotate();
 
+        if (Input.GetKey("r"))
+        {
+            this.gameObject.transform.position = SpawnArea;
+        }
+
 
         if (sceneCamera.GetComponent<CameraControls>().zoomed == true)
         {
