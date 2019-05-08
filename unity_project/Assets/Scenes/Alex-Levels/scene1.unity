@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 352418333}
-  CameraSize: 25
+  CameraSize: 10
   player: {fileID: 1473771258}
   levelCentre: {fileID: 934078152}
   zoomed: 0
@@ -1521,6 +1521,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 3.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072297733730438091, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 667463061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072297733730438091, guid: 45a581e143197f84da50691af17ef47b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a581e143197f84da50691af17ef47b, type: 3}
